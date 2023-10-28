@@ -1,0 +1,11 @@
+MVC  ==> Padrão de projeto
+A premissa de divisão de responsabilidades
+
+Classe
+Repositório
+Serviço
+
+Criar um servidor (express) - npm init
+Criar os endpoints (rotas)
+Router => organizar as nossas rotas (separar as responsabilidades)
+Controllers => DB
