@@ -1,13 +1,15 @@
 const expres = require("express")
 const router = expres.Router()
 
+const userRepo = require('../../repositories/users')
+
 router.post("/login", (req, res) =>{
     res.send("Logged in!");
 })
 
 router.post("/signup", (req, res) =>{
 
-    console.log(req.body)
+    userRepo.create(req.body)
     /*
     Pegar email, nome e senha e salvar em um server
     Salvar em um arquivo JSON no server
