@@ -1,10 +1,22 @@
 const expres = require("express")
 const router = expres.Router()
+const screenSignup = require("../../view/signup")
+const screenSignin = require("../../view/signin")
+const product = require("../../view/prod-layout")
+
 
 const userRepo = require('../../repositories/users')
 
 router.post("/login", (req, res) =>{
-    res.send("Logged in!");
+    res.send(product());
+})
+
+router.get("/login", (req, res) =>{
+    res.send(screenSignin());
+})
+
+router.get("/signup", (req, res) =>{
+    res.send(screenSignup());
 })
 
 router.post("/signup", (req, res) =>{
